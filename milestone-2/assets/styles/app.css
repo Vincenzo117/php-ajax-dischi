@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app-container {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: #2E3A46;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+header .container {
+    padding: 12px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+
+main {
+    flex-grow: 1;
+    background-color: #1E2D3B;
+    margin-top: 75px;
+}
+
+main .container {
+    padding: 80px;
+    position: relative;
+}
+
+.records-wrapper {
+    max-width: 1160px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 40px;
+}
+
+.record {
+    background-color: #2E3A46;
+    padding: 20px;
+    min-width: 200px;
+    max-width: 200px;
+    height: 360px;
+    text-align: center;
+}
+
+.record__thumb {
+    margin-bottom: 20px;
+}
+
+.record__thumb img {
+    width: 100%;
+}
+
+.record__title {
+    color: white;
+    margin-bottom: 25px;
+}
+
+.record__info {
+    color: #737A7F;
+}
+
+.record__author {
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+.record__year {
+    font-size: 14px;
+}
