@@ -29,6 +29,21 @@ header .container {
     color: white;
 }
 
+.header__select {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#genres {
+    background-color: #2E3A46;
+    border: 2px solid #1E2D3B;
+    height: 30px;
+    border-radius: 5px;
+    place-self: center;
+    color: white;
+}
+
 main {
     flex-grow: 1;
     background-color: #1E2D3B;

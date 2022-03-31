@@ -1,5 +1,4 @@
 <?php
-
 $data = [
     [
         "poster" => "https://www.onstageweb.com/wp-content/uploads/2018/09/bon-jovi-new-jersey.jpg",
@@ -73,6 +72,21 @@ $data = [
     ]
 ];
 
-header('Content-Type: application/json');
+$filter = isset($_GET["genre"]) ? $_GET["genre"] : '';
 
+function isGood($record)
+{
+    if ($record['genre'] ==  $GLOBALS["filter"]) {
+        return true;
+    } else {
+        return false;
+    }
+};
+
+if ($filter != '' && $filter != 'All') {
+    $data = array_filter($data, "isGood");
+}
+
+
+header('Content-Type: application/json');
 echo json_encode($data);
