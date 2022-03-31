@@ -1,3 +1,6 @@
+<?php
+include './server.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,16 +25,22 @@
         <main>
             <div class="container">
                 <div class="records-wrapper">
-                    <div class="record">
-                        <figure class="record__thumb">
-                            <img :src="record.poster" alt="" />
-                        </figure>
-                        <h3 class="record__title"></h3>
-                        <div class="record__info">
-                            <div class="record__author"></div>
-                            <div class="record__year"></div>
+                    <?php
+                    foreach ($data as $key => $value) {
+                    ?>
+                        <div class="record">
+                            <figure class="record__thumb">
+                                <img src="<?php echo $value['poster'];?>" alt="" />
+                            </figure>
+                            <h3 class="record__title"><?php echo $value['title'];?></h3>
+                            <div class="record__info">
+                                <div class="record__author"><?php echo $value['author'];?></div>
+                                <div class="record__year"><?php echo $value['year'];?></div>
+                            </div>
                         </div>
-                    </div>
+                    <?php
+                    }
+                    ?>
                 </div>
             </div>
         </main>
